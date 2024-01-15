@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  database:
+    image: mariadb:latest
+    container_name: ticket_planner_db
+    environment:
+      - MARIADB_ROOT_PASSWORD=ticketplanner
+      - MARIADB_DATABASE=ticketplanner
+    ports:
+      - 3306:3306
