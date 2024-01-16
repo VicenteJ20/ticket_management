@@ -18,7 +18,7 @@ const DashboardCard = ({ title, icon, value, oldValue }: DashboardCardProps) => 
 
   }, [oldValue, value])
   return (
-    <Card className='bg-white flex-auto max-w-80'>
+    <Card className='bg-white w-auto'>
       <CardHeader className='flex flex-row gap-8 items-center w-full justify-between'>
         <CardTitle className='text-gray-700'>{title}</CardTitle>
         <span className='pb-1.5 text-xl'>{icon}</span>
@@ -27,7 +27,7 @@ const DashboardCard = ({ title, icon, value, oldValue }: DashboardCardProps) => 
         <span className='text-4xl font-bold text-gray-800'>{value}</span>
       </CardContent>
       <CardFooter>
-        <span className='text-sm text-zinc-500'>{difference !== 0 ? `${difference}%` : 'Sin variación'} respecto al mes anterior</span>
+        <span className='text-sm text-zinc-500 max-w-52'>{difference !== 0 ? `${difference}%` : 'Sin variación'} respecto al mes anterior</span>
       </CardFooter>
     </Card>
   )

@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }: any) => {
     <>
       <NavbarDesktop />
       <HeaderDesktop />
-      <section className='pl-64 pr-8 pb-4 pt-24 bg-zinc-50 min-w-content w-screen min-h-screen'>
+      <section className='pl-64 pr-8 pb-4 pt-24 bg-zinc-50 max-w-screen min-h-screen ' suppressHydrationWarning>
         {children}
       </section>
     </>
