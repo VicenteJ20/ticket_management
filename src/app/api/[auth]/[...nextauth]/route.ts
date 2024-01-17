@@ -52,7 +52,7 @@ export const OPTIONS: NextAuthOptions = {
   ],
   callbacks: {
     // Se utiliza JWT para que se pueda tratar el rol asignado desde el servidor
-    async jwt({ token, user }: { token: any, user: any}) {
+    async jwt({ token, user,  }: { token: any, user: any}) {
       if (user) token.role = user.roleId
       return token
     },

@@ -1,11 +1,10 @@
 'use client'
 import { usePathname } from "next/navigation"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuGroup, DropdownMenuShortcut } from "../ui/dropdown-menu"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuGroup } from "../ui/dropdown-menu"
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import { MENULINKS } from "@/constants/Navbar"
-import { BellIcon, ChatBubbleBottomCenterIcon } from "@heroicons/react/20/solid"
 import { BellAlertIcon } from "@heroicons/react/24/outline"
 
 const HeaderDesktop = () => {
