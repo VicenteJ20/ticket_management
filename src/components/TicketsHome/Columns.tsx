@@ -5,8 +5,7 @@ import { TicketTable } from '@/interfaces/TicketTable'
 import { DropdownMenu, DropdownMenuItem, DropdownMenuSeparator } from '@radix-ui/react-dropdown-menu'
 import { DropdownMenuContent, DropdownMenuLabel, DropdownMenuTrigger } from '../ui/dropdown-menu'
 import { Button } from '../ui/button'
-import { EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
-
+import { ArrowsUpDownIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 
 export const Columns: ColumnDef<TicketTable>[] = [
   {
@@ -27,7 +26,17 @@ export const Columns: ColumnDef<TicketTable>[] = [
   },
   {
     accessorKey: 'priority',
-    header: 'Prioridad',
+    header: ({ column }) => {
+      return (
+        <Button
+          variant='ghost'
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+          >
+          Prioridad
+          <ArrowsUpDownIcon className='h-4 w-4 ml-2' />
+        </Button>
+      )
+    }
   },
   {
     accessorKey: 'created_at',
