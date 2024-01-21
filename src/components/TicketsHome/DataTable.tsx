@@ -62,10 +62,11 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className='flex items-center py-4 gap-4'>
-        <div className='flex flex-col gap-3'>
-          <Label className='text-stone-900 font-semibold'>Filtrar por cliente</Label>
+      <div className='grid grid-cols-5 py-4 gap-4'>
+        <div className='flex flex-col gap-3 col-span-1'>
+          <Label className='text-stone-900 font-semibold whitespace-nowrap'>Filtrar por cliente</Label>
           <Input
+            className='rounded-[0.3rem] bg-white'
             placeholder='ej: smartparking@gmail.com'
             value={(table.getColumn('client')?.getFilterValue() as string) ?? ''}
             onChange={(e) =>
@@ -73,9 +74,10 @@ export function DataTable<TData, TValue>({
             }
           />
         </div>
-        <div className='flex flex-col gap-3'>
-          <Label className='text-gray-900 font-semibold'>Filtrar por encargado</Label>
+        <div className='flex flex-col gap-3 col-span-1 min-w-fit'>
+          <Label className='text-gray-900 font-semibold whitespace-nowrap'>Filtrar por encargado</Label>
           <Input
+            className='rounded-[0.3rem] bg-white'
             placeholder='ej: vicente@gmail.com'
             value={(table.getColumn('manager')?.getFilterValue() as string) ?? ''}
             onChange={(e) =>
@@ -83,11 +85,11 @@ export function DataTable<TData, TValue>({
             }
           />
         </div>
-        <div className='flex flex-col gap-3'>
-          <Label className='text-gray-900 font-semibold'>Visibilidad columnas</Label>
+        <div className='flex flex-col gap-3 col-start-5 min-w-fit'>
+          <Label className='text-gray-900 font-semibold whitespace-nowrap'>Visibilidad columnas</Label>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="ml-auto w-full text-stone-600 select-none hover:bg-zinc-900 hover:text-white transition-all duration-300 ease-in-out">
+              <Button variant="outline" className="ml-auto bg-white rounded-[0.3rem] w-full text-stone-600 select-none hover:bg-zinc-900 hover:text-white transition-all duration-300 ease-in-out">
                 Columnas
               </Button>
             </DropdownMenuTrigger>
@@ -164,7 +166,7 @@ export function DataTable<TData, TValue>({
             }
           </TableBody>
         </Table>
-      </div>
+      {/* </div>
       <div className='flex items-center justify-end space-x-2 py-4'>
         <Button
           variant='outline'
@@ -182,6 +184,7 @@ export function DataTable<TData, TValue>({
         >
           Siguiente
         </Button>
+      </div> */}
       </div>
     </div>
   )

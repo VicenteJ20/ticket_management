@@ -1,4 +1,6 @@
 import { TicketTable } from "@/interfaces/TicketTable";
+import { TicketIcon } from "@heroicons/react/24/outline";
+import { UserCircleIcon } from "@heroicons/react/24/solid";
 
 const TicketsData: TicketTable[] = [
   {
@@ -93,4 +95,25 @@ const TicketsData: TicketTable[] = [
   }
 ]
 
-export { TicketsData }
+const TICKETDATASTATIC = [
+  {
+    title: 'Tickets pendientes',
+    value: 2,
+    oldValue: 0,
+    icon: <TicketIcon className="h-6 w-6 text-stone-700 fill-orange-400" aria-hidden="true" />,
+  },
+  {
+    title: 'Tickets cerrados',
+    value: 9,
+    oldValue: 20,
+    icon: <TicketIcon className="h-6 w-6 text-stone-700 fill-lime-400" aria-hidden="true" />,
+  },
+  {
+    title: 'Clientes registrados',
+    value: 4,
+    oldValue: 4,
+    icon: <UserCircleIcon className="h-6 w-6 text-stone-700" aria-hidden="true" />,
+  }
+]
+
+export { TicketsData, TICKETDATASTATIC }

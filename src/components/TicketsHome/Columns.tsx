@@ -73,11 +73,11 @@ export const Columns: ColumnDef<TicketTable>[] = [
               Ver ticket
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className='pl-2 outline-none hover:bg-zinc-100 cursor-pointer transition-all duration-300 ease-in-out' onClick={() => alert(ticket.id)}>
+            <DropdownMenuItem className='pl-2 outline-none hover:bg-zinc-100 cursor-pointer transition-all duration-300 ease-in-out' onClick={() => alert(ticket.client)}>
               Ver cliente
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className='pl-2 outline-none hover:bg-zinc-100 cursor-pointer transition-all duration-300 ease-in-out' onClick={() => alert(ticket.id)}>
+            <DropdownMenuItem className='pl-2 outline-none hover:bg-zinc-100 cursor-pointer transition-all duration-300 ease-in-out' onClick={() => alert(ticket.manager)}>
               Ver encargado
             </DropdownMenuItem>
           </DropdownMenuContent>
